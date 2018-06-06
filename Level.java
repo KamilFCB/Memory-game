@@ -182,16 +182,8 @@ public class Level extends JFrame
             }
             
         }        
-    };    
-  /*  
-    private void sl()
-    {
-        try {
-                    TimeUnit.SECONDS.sleep(1);
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(Level.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-                }
-    }*/
+    };
+    
     /**
      * Generates new board depending on the level selected by player.
      * @param lvl
