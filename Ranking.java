@@ -116,7 +116,20 @@ public class Ranking implements Serializable
                     
                     if((new_secs < rank_secs) || (new_secs == rank_secs && scr.get_moves() < easy[i].get_moves()))
                     {
-                        easy[i] = scr;
+                        if(i == 0)
+                        {
+                            easy[2] = easy[1];
+                            easy[1] = easy[0];
+                            easy[0] = scr;
+                        }
+                        else if(i == 1)
+                        {
+                            easy[2] = easy[1];
+                            easy[1] = scr;
+                        }
+                        else
+                            easy[i] = scr;
+                        
                         try
                         {
                             FileOutputStream file_out = new FileOutputStream("ranking.ser");
@@ -160,7 +173,20 @@ public class Ranking implements Serializable
                     
                     if((new_secs < rank_secs) || (new_secs == rank_secs && scr.get_moves() < medium[i].get_moves()))
                     {
-                        medium[i] = scr;
+                        if(i == 0)
+                        {
+                            medium[2] = medium[1];
+                            medium[1] = medium[0];
+                            medium[0] = scr;
+                        }
+                        else if(i == 1)
+                        {
+                            medium[2] = medium[1];
+                            medium[1] = scr;
+                        }
+                        else
+                            medium[i] = scr;
+                        
                         try
                         {
                             FileOutputStream file_out = new FileOutputStream("ranking.ser");
@@ -204,7 +230,20 @@ public class Ranking implements Serializable
                     
                     if((new_secs < rank_secs) || (new_secs == rank_secs && scr.get_moves() < hard[i].get_moves()))
                     {
-                        hard[i] = scr;
+                        if(i == 0)
+                        {
+                            hard[2] = hard[1];
+                            hard[1] = hard[0];
+                            hard[0] = scr;
+                        }
+                        else if(i == 1)
+                        {
+                            hard[2] = hard[1];
+                            hard[1] = scr;
+                        }
+                        else
+                            hard[i] = scr;
+                        
                         try
                         {
                             FileOutputStream file_out = new FileOutputStream("ranking.ser");
